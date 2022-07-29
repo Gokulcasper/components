@@ -4,15 +4,25 @@ export default class Nice extends React.Component {
   constructor() {
     super();
     this.clicked = this.clicked.bind(this);
+    this.state = {
+      name: "Cyber Dude",
+      subs: 500,
+    };
   }
   clicked() {
-    console.log(this);
+    let incr = this.state.subs + 1;
+    this.setState({
+      name: "Cyber Dude",
+      subs: incr,
+    });
   }
+
   render() {
     return (
       <div>
-        <div>Nice Day {this.props.name}</div>
-        <button onClick={this.clicked}>Click Me</button>
+        <p>Channel Name : {this.state.name}</p>
+        <p>Subscribes : {this.state.subs}</p>
+        <button onClick={this.clicked}>Subscribe</button>
       </div>
     );
   }

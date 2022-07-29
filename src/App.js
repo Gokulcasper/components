@@ -8,8 +8,8 @@ const App = () => {
   return (
     <div>
       <Nice name={name} title="passing props" />
-      <p title="Hello">Welcome To JS </p>
-      <NiceFun name={name} />
+      {/* <p title="Hello">Welcome To JS </p>
+      <NiceFun name={name} /> */}
     </div>
   );
 };
