@@ -9,7 +9,7 @@ const App = () => {
     <div>
       <Nice name={name} title="passing props" />
       <p title="Hello">Welcome To JS </p>
-      <NiceFun />
+      <NiceFun name={name} />
     </div>
   );
 };

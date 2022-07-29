@@ -1,6 +1,7 @@
 import React from "react";
 
-function NiceFun() {
+function NiceFun(props) {
+  console.log(props);
   return <div>Hi NiceFun</div>;
 }
 
