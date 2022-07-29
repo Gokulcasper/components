@@ -12,7 +12,7 @@ export default class Nice extends React.Component {
   clicked() {
     let incr = this.state.subs + 1;
     this.setState({
-      name: "Cyber Dude",
+      ...this.setState,
       subs: incr,
     });
   }
