@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 function NiceFun(props) {
-  console.log(props);
+  const [Name, setName] = useState("Cyber Dude");
+  const [subs, setSubs] = useState(500);
   const clicked = (e) => {
-    console.log(e);
+    setSubs(subs + 1);
+    setName(Name + " Network ");
   };
   return (
     <div>
-      <div>Hi NiceFun</div>
-      <button onClick={clicked}>Click</button>
+      <p> ChannelName : {Name} </p>
+      <p> Subscribes : {subs} </p>
+      <button onClick={clicked}>Subscribe</button>
     </div>
   );
 }
