@@ -2,7 +2,15 @@ import React from "react";
 
 function NiceFun(props) {
   console.log(props);
-  return <div>Hi NiceFun</div>;
+  const clicked = (e) => {
+    console.log(e);
+  };
+  return (
+    <div>
+      <div>Hi NiceFun</div>
+      <button onClick={clicked}>Click</button>
+    </div>
+  );
 }
 
 export default NiceFun;
