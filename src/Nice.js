@@ -2,6 +2,7 @@ import React from "react";
 
 export default class Nice extends React.Component {
   constructor() {
+    console.log("This is Constructor");
     super();
     this.clicked = this.clicked.bind(this);
     this.state = {
@@ -9,6 +10,11 @@ export default class Nice extends React.Component {
       subs: 500,
     };
   }
+
+  componentDidMount() {
+    console.log("ComponentDidUpdate");
+  }
+
   clicked() {
     let incr = this.state.subs + 1;
     this.setState({
@@ -18,6 +24,7 @@ export default class Nice extends React.Component {
   }
 
   render() {
+    console.log("Render");
     return (
       <div>
         <p>Channel Name : {this.state.name}</p>
@@ -25,5 +32,9 @@ export default class Nice extends React.Component {
         <button onClick={this.clicked}>Subscribe</button>
       </div>
     );
+  }
+
+  componentWillUnmount() {
+    console.log("ComponentWillMount");
   }
 }
