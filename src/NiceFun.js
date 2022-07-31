@@ -14,6 +14,10 @@ function NiceFun(props) {
     // setName(Name + " Network ");
   };
 
+  submitForm = () => {};
+
+  const changeName = () => {};
+
   // console.log("This is Constructor");
   // useEffect(() => {
   //   console.log("ComponentDidMount");
@@ -33,6 +37,15 @@ function NiceFun(props) {
 
   return (
     <div>
+      <form onSubmit={submitForm}>
+        <input
+          type="text"
+          placeholder="ChangeName"
+          value={Name}
+          onChange={changeName}
+        />
+        <button type="submit">Change</button>
+      </form>
       <p> ChannelName : {Name} </p>
       <p> Button Own : {subs < 100 ? "No Button" : "Silver Button"}</p>
       <p> Subscribes : {subs}K </p>
