@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 
 function NiceFun(props) {
   const [Name, setName] = useState("Cyber Dude");
-  const [subs, setSubs] = useState(500);
+  const [subs, setSubs] = useState(98);
   const clicked = (e) => {
     setSubs(subs + 1);
-    setName(Name + " Network ");
+    // setName(Name + " Network ");
   };
 
   // console.log("This is Constructor");
@@ -28,7 +28,8 @@ function NiceFun(props) {
   return (
     <div>
       <p> ChannelName : {Name} </p>
-      <p> Subscribes : {subs} </p>
+      <p> Button Own : {subs < 100 ? "No Button" : "Silver Button"}</p>
+      <p> Subscribes : {subs}K </p>
       <button onClick={clicked}>Subscribe</button>
     </div>
   );
