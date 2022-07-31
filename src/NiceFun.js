@@ -8,13 +8,22 @@ function NiceFun(props) {
     setName(Name + " Network ");
   };
 
-  console.log("This is Constructor");
+  // console.log("This is Constructor");
+  // useEffect(() => {
+  //   console.log("ComponentDidMount");
+  //   return () => {
+  //     console.log("ComponentWillMount");
+  //   };
+  // }, []);
+
+  // use Effect -> Accepts 2 functional arguments are functions(), dependency Array[].
   useEffect(() => {
-    console.log("ComponentDidUpdate");
-    return () => {
-      console.log("ComponentWillMount");
-    };
+    console.log("ComponentDidMount");
   }, []);
+
+  useEffect(() => {
+    console.log("Subscribe Counts");
+  }, [subs]);
 
   return (
     <div>
