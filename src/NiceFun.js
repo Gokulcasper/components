@@ -11,20 +11,15 @@ function NiceFun(props) {
   ]);
   const clicked = (e) => {
     setSubs(subs + 1);
-    // setName(Name + " Network ");
   };
 
-  submitForm = () => {};
+  const submitForm = (e) => {
+    e.preventDefault();
+  };
 
-  const changeName = () => {};
-
-  // console.log("This is Constructor");
-  // useEffect(() => {
-  //   console.log("ComponentDidMount");
-  //   return () => {
-  //     console.log("ComponentWillMount");
-  //   };
-  // }, []);
+  const changeName = (e) => {
+    setName(e.target.value);
+  };
 
   // use Effect -> Accepts 2 functional arguments are functions(), dependency Array[].
   useEffect(() => {
