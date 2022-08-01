@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 function NiceFun(props) {
   const [Name, setName] = useState("Cyber Dude");
@@ -9,6 +9,8 @@ function NiceFun(props) {
     "REACT",
     "INTERVIEW",
   ]);
+
+  const input = useRef(null);
   const clicked = (e) => {
     setSubs(subs + 1);
   };
@@ -21,9 +23,12 @@ function NiceFun(props) {
     setName(e.target.value);
   };
 
+  console.log(input);
   // use Effect -> Accepts 2 functional arguments are functions(), dependency Array[].
   useEffect(() => {
     console.log("ComponentDidMount");
+    console.log(input);
+    input.current.focus();
   }, []);
 
   useEffect(() => {
@@ -38,6 +43,7 @@ function NiceFun(props) {
           placeholder="ChangeName"
           value={Name}
           onChange={changeName}
+          ref={input}
         />
         <button type="submit">Change</button>
       </form>
